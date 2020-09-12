@@ -48,9 +48,9 @@ echo "Interfacing Options>P2 VNC>Yes>Ok>Finish"
 echo ""
 echo -e "${BGreen}installing Prometheus${reset}"
 wget https://github.com/prometheus/prometheus/releases/download/v2.21.0/prometheus-2.21.0.linux-armv7.tar.gz
-tar -zxvf prometheus-2.21.0.linux-armv7.tar.gz
-rm prometheus-2.21.0.linux-armv7.tar.gz
-mv prometheus-2.21.0.linux-armv7 prometheus
+tar -zxvf prometheus-*.tar.gz
+rm prometheus-*.tar.gz
+mv prometheus-* prometheus
 
 echo ""
 echo -e "${BGreen}Created prometheus.service${reset}"
@@ -67,9 +67,9 @@ echo "Done"
 echo ""
 echo -e "${BGreen}installing node_exporter${reset}"
 wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-armv7.tar.gz
-tar -zxvf node_exporter-1.0.1.linux-armv7.tar.gz
-rm node_exporter-1.0.1.linux-armv7.tar.gz
-mv node_exporter-1.0.1.linux-armv7 node_exporter
+tar -zxvf node_exporter-*.tar.gz
+rm node_exporter-*.tar.gz
+mv node_exporter-* node_exporter
 
 echo ""
 echo -e "${BGreen}Created node_exporter.service${reset}"
