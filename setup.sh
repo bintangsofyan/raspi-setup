@@ -11,7 +11,7 @@ echo -e "${BGreen}test ping 8.8.8.8${reset}"
 ping -c 4 8.8.8.8
 
 echo ""
-echo -e "$install pihole${reset}"
+echo -e "${BGreen}install pihole${reset}"
 curl -sSL https://install.pi-hole.net | bash
 
 echo ""
@@ -38,6 +38,7 @@ apt clean
 echo ""
 echo -e "${BGreen}install vnc${reset}"
 apt-get install realvnc-vnc-server realvnc-vnc-viewer
+echo "Done"
 
 echo ""
 echo -e "${BGreen}turn on VNC interfaces${reset}"
@@ -85,7 +86,7 @@ echo "Done"
 echo ""
 echo -e "${BGreen}add node_exporter to prometheus.yml${reset}"
 # add - targets: ['localhost:9100'] on /root/prometheus/prometheus.yml
-printf '%s\n' '- targets: ['localhost:9100']' >> /root/prometheus/prometheus.yml
+printf "%s\n" "- targets: ['localhost:9100']" >> /root/prometheus/prometheus.yml
 
 echo ""
 echo -e "${BGreen}Restart Prometheus${reset}"
