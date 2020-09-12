@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 reset='\033[0m'
 BGreen='\033[1;32m'       # Green
 
@@ -45,6 +45,7 @@ mv prometheus-2.21.0.linux-armv7 prometheus
 echo ""
 echo -e "${BGreen}Created prometheus.service${reset}"
 printf '%s\n' '[Unit]' 'Description=Prometheus Server' 'Documentation=https://prometheus.io/docs/introduction/overview/' 'After=network-online.target' '' '[Service]' 'User=root' 'Restart=on-failure' '' 'ExecStart=/root/prometheus/prometheus \' '  --config.file=/root/prometheus/prometheus.yml \' '  --storage.tsdb.path=/root/prometheus/data' '' '[Install]' 'WantedBy=multi-user.target' >> /etc/systemd/system/prometheus.service
+echo "Done"
 
 echo ""
 echo -e "${BGreen}Start and enable Prometheus Services${reset}"
@@ -63,6 +64,7 @@ mv node_exporter-1.0.1.linux-armv7 node_exporter
 echo ""
 echo -e "${BGreen}Created node_exporter.service${reset}"
 printf '%s\n' '[Unit]' 'Description=Node Exporter' 'Wants=network-online.target' 'After=network-online.target' '' '[Service]' 'User=root' 'ExecStart=/root/node_exporter/node_exporter' '' '[Install]' 'WantedBy=default.target' >> /etc/systemd/system/node_exporter.service
+echo "Done"
 
 echo ""
 echo -e "${BGreen}Start and enable node_exporter Services${reset}"
