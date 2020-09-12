@@ -6,12 +6,12 @@ echo ""
 echo -e "${BGreen}Start Shell Script${reset}"
 
 echo ""
-echo -e "${BGreen}get into /root/${reset}"
-cd /root/
-
-echo ""
 echo -e "${BGreen}setup static ip to 192.168.1.254 with default gateway 192.168.1.1${reset}"
 printf '%s\n' 'interface eth0' '' 'static ip_address=192.168.0.254/24' '' 'static routers=192.168.1.1' >> /etc/systemd/system/node_exporter.service
+
+echo ""
+echo -e "${BGreen}get into /root/${reset}"
+cd /root/
 
 echo ""
 echo -e "${BGreen}Cheking the Update 1${reset}"
