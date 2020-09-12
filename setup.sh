@@ -3,15 +3,16 @@ reset='\033[0m'
 BGreen='\033[1;32m'       # Green
 
 echo ""
-echo -e "${BGreen}Start Shell Script${reset}"
+echo -e "${BGreen}Start Shell Script with bash${reset}"
+sudo bash
 
 echo ""
 echo -e "${BGreen}test ping 8.8.8.8${reset}"
 ping -c 4 8.8.8.8
 
 echo ""
-echo -e "${BGreen}setup static ip to 192.168.1.254 with default gateway 192.168.1.1${reset}"
-printf '%s\n' 'interface eth0' 'static ip_address=192.168.1.254/24' 'static routers=192.168.1.1' >> /etc/dhcpcd.conf
+echo -e "$install pihole${reset}"
+curl -sSL https://install.pi-hole.net | bash
 
 echo ""
 echo -e "${BGreen}get into /root/${reset}"
@@ -104,3 +105,7 @@ echo "Done"
 
 echo ""
 echo -e "${BGreen}Done${reset}"
+
+echo ""
+echo -e "${BGreen}Reboot${reset}"
+reboot
