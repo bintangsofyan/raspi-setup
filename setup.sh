@@ -7,7 +7,7 @@ echo -e "${BGreen}Start Shell Script${reset}"
 
 echo ""
 echo -e "${BGreen}test ping 8.8.8.8${reset}"
-ping -c 2 8.8.8.8
+ping -c 4 8.8.8.8
 
 echo ""
 echo -e "${BGreen}setup static ip to 192.168.1.254 with default gateway 192.168.1.1${reset}"
