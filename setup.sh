@@ -11,10 +11,6 @@ echo -e "${BGreen}test ping 8.8.8.8${reset}"
 ping -c 4 8.8.8.8
 
 echo ""
-echo -e "${BGreen}install pihole${reset}"
-curl -sSL https://install.pi-hole.net | bash
-
-echo ""
 echo -e "${BGreen}get into /root/${reset}"
 cd /root/
 
@@ -105,6 +101,10 @@ echo -e "${BGreen}Start and enable Grafana Services${reset}"
 sudo /bin/systemctl enable grafana-server
 sudo /bin/systemctl start grafana-server
 echo "Done"
+
+echo ""
+echo -e "${BGreen}install pihole${reset}"
+curl -sSL https://install.pi-hole.net | bash
 
 echo ""
 echo -e "${BGreen}Done${reset}"
