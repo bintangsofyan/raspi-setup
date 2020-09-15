@@ -1,7 +1,7 @@
 #!/bin/sh
 reset='\033[0m'
 BGreen='\033[1;32m'       # Green
-$version_prometheus=https://raw.githubusercontent.com/prometheus/prometheus/master/VERSION
+$version_prometheus='https://raw.githubusercontent.com/prometheus/prometheus/master/VERSION'
 
 echo ""
 echo -e "${BGreen}Start Shell Script with bash${reset}"
