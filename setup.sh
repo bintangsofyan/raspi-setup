@@ -1,7 +1,6 @@
 #!/bin/sh
 reset='\033[0m'
 BGreen='\033[1;32m'       # Green
-version_prometheus= curl https://raw.githubusercontent.com/prometheus/prometheus/master/VERSION
 
 echo ""
 echo -e "${BGreen}Start Shell Script with bash${reset}"
@@ -44,7 +43,7 @@ echo "Interfacing Options>P2 VNC>Yes>Ok>Finish"
 
 echo ""
 echo -e "${BGreen}installing Prometheus${reset}"
-wget https://github.com/prometheus/prometheus/releases/download/${version_prometheus}/prometheus-${version_prometheus}.linux-armv7.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/2.21.0/prometheus-2.21.0.linux-armv7.tar.gz
 tar -zxvf prometheus-*.tar.gz
 rm prometheus-*.tar.gz
 mv prometheus-* prometheus
