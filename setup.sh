@@ -43,7 +43,7 @@ echo "Interfacing Options>P2 VNC>Yes>Ok>Finish"
 
 echo ""
 echo -e "${BGreen}installing Prometheus${reset}"
-wget https://github.com/prometheus/prometheus/releases/download/2.21.0/prometheus-2.21.0.linux-armv7.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v2.21.0/prometheus-2.21.0.linux-armv7.tar.gz
 tar -zxvf prometheus-*.tar.gz
 rm prometheus-*.tar.gz
 mv prometheus-* prometheus
